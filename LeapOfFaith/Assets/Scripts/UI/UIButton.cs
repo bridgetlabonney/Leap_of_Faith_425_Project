@@ -2,14 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class Button : MonoBehaviour
+public class UIButton : MonoBehaviour
 {
-   void changeScene(string scene)
+    //loads whatever scene matches the string name
+   public void changeScene(string scene)
     {
         SceneManager.LoadScene(scene);
     }
 
-    void quit()
+    //quits the game
+    public void quit()
     {
         Application.Quit();
     }
