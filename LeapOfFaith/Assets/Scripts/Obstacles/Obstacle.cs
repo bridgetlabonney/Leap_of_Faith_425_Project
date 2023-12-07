@@ -5,7 +5,7 @@ using UnityEngine;
 public class Obstacle : MonoBehaviour
 {
 
-   public int dmg;
+   public double dmg;
    public int type = 0;
     // Start is called before the first frame update
     void Start()
@@ -18,7 +18,7 @@ public class Obstacle : MonoBehaviour
                 //load asset
                 break;
             case 1: //spike
-                dmg = 5;
+                dmg = 0.5;
                 //load asset
                 break;
 
