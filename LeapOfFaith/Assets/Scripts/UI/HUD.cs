@@ -22,13 +22,45 @@ public class HUD : MonoBehaviour
     void Update()
     {
         //check for new updates to player values
+        healthConfig(player.health);
        
     }
 
-    void healthConfig(double health)
+    void healthConfig(int health)
     {
-       
+        switch (health)
+        {
 
+            case 0:
+                break;
 
+            case 1:
+                h1.GetComponent<UnityEngine.UI.Image>().sprite = half;
+                h2.GetComponent<UnityEngine.UI.Image>().sprite = empty;
+                h3.GetComponent<UnityEngine.UI.Image>().sprite = empty;
+                break;
+            case 2:
+                //h1.GetComponent<UnityEngine.UI.Image>().sprite = full;
+                h2.GetComponent<UnityEngine.UI.Image>().sprite = empty;
+                h3.GetComponent<UnityEngine.UI.Image>().sprite = empty;
+                break;
+            case 3:
+               // h1.GetComponent<UnityEngine.UI.Image>().sprite = full;
+                h2.GetComponent<UnityEngine.UI.Image>().sprite = half;
+                h3.GetComponent<UnityEngine.UI.Image>().sprite = empty;
+                break;
+            case 4:
+                //h1.GetComponent<UnityEngine.UI.Image>().sprite = full;
+                //h2.GetComponent<UnityEngine.UI.Image>().sprite = full;
+                h3.GetComponent<UnityEngine.UI.Image>().sprite = empty;
+                break;
+            case 5:
+                
+                h3.GetComponent<UnityEngine.UI.Image>().sprite = half;
+                break;
+            default:
+                break;
+
+        }
     }
 }

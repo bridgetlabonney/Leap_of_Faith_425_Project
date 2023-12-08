@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Obstacle : MonoBehaviour
 {
 
-   public double dmg;
-   public int type = 0;
+   public int dmg;
+   public int type;
+    public Player player;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +20,7 @@ public class Obstacle : MonoBehaviour
                 //load asset
                 break;
             case 1: //spike
-                dmg = 0.5;
+                dmg = 1;
                 //load asset
                 break;
 
@@ -31,8 +33,9 @@ public class Obstacle : MonoBehaviour
         
     }
 
-    //TODO
-    //on colide with player
-    //hitboxes
-
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        player.health = player.health - dmg;
+        if (player.health <= 0) SceneManager.LoadScene("MainMenu");
+    }
 }
