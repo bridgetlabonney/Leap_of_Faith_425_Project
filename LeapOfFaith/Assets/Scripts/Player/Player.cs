@@ -6,6 +6,7 @@ using UnityEngine;
 //TODO
 //player hurtbox/hitbox (collider2D)
 //health/damage (inegrate with HUD)
+//sight mechanic
 
 
 public class Player : MonoBehaviour
