@@ -5,6 +5,8 @@ using UnityEngine;
 /// <summary>
 /// Darkness System script to put on the top darkness layer object
 /// Author: Indie Marc (Marc-Antoine Desbiens)
+/// THIS CODE WAS IMPORTED FROM AN ASSET. AVAILABLE HERE:
+/// https://assetstore.unity.com/packages/tools/particles-effects/darkness-system-2d-138556?aid=1100l9QHv&utm_campaign=unity_affiliate&utm_medium=affiliate&utm_source=partnerize-linkmaker
 /// </summary>
 
 namespace IndieMarc.Darkness
