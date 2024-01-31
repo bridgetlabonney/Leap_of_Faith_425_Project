@@ -1,19 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class ActiveCam : MonoBehaviour
 {
     // Start is called before the first frame update
-    public Camera activeCamera;
+    public CinemachineVirtualCamera activeCamera = null;
 
-    public void setActiveCam(Camera cam)
+    public void setActiveCam(CinemachineVirtualCamera cam)
     {
         activeCamera = cam;
     }
     public void diableActiveCam()
     {
-        activeCamera.enabled = !activeCamera.enabled;
+        activeCamera.Priority = 0;
     }
 
     void Start()
