@@ -4,9 +4,7 @@ using UnityEngine;
 
 
 //TODO
-//player hurtbox/hitbox (collider2D)
-//health/damage (inegrate with HUD)
-//sight mechanic
+//player needs animations
 
 
 public class Player : MonoBehaviour
@@ -22,10 +20,11 @@ public class Player : MonoBehaviour
     [SerializeField] private LayerMask groundLayer;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
 
         health = 3;
+       
 
     }
 
