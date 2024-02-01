@@ -3,19 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
+//TODO
+//health upgrades?
+//enable/disable for cutscenes.
+//array shenanigans (using GameObject[] h instead of 3)
+//iframes
+
 public class HUD : MonoBehaviour
 {
     //controls health bar
-    public GameObject h1;
-    public GameObject h2;
-    public GameObject h3;
+    public GameObject[] h;
+    private int numHearts; 
     public Player player;
-    public Sprite half;
     public Sprite empty;
     // Start is called before the first frame update
     void Start()
     {
-       // h1.GetComponent<UnityEngine.UI.Image>().sprite
+        numHearts = 3;
+        
     }
 
     // Update is called once per frame
@@ -26,41 +31,21 @@ public class HUD : MonoBehaviour
        
     }
 
+    //numHearts tracks the NUMBER of hearts on screen
+    //health tracks the players CURRENT health
+    //if they dont match, player got hurt and health must be updated
+    //since its so minimal, it can run every frame 
     void healthConfig(int health)
     {
-        switch (health)
+        
+        print(numHearts);
+        print(player.health);
+         if(health < numHearts)
         {
+            // h1.GetComponent<UnityEngine.UI.Image>().sprite
+            h[numHearts - 1].GetComponent<UnityEngine.UI.Image>().sprite = empty;
 
-            case 0:
-                break;
-
-            case 1:
-                h1.GetComponent<UnityEngine.UI.Image>().sprite = half;
-                h2.GetComponent<UnityEngine.UI.Image>().sprite = empty;
-                h3.GetComponent<UnityEngine.UI.Image>().sprite = empty;
-                break;
-            case 2:
-                //h1.GetComponent<UnityEngine.UI.Image>().sprite = full;
-                h2.GetComponent<UnityEngine.UI.Image>().sprite = empty;
-                h3.GetComponent<UnityEngine.UI.Image>().sprite = empty;
-                break;
-            case 3:
-               // h1.GetComponent<UnityEngine.UI.Image>().sprite = full;
-                h2.GetComponent<UnityEngine.UI.Image>().sprite = half;
-                h3.GetComponent<UnityEngine.UI.Image>().sprite = empty;
-                break;
-            case 4:
-                //h1.GetComponent<UnityEngine.UI.Image>().sprite = full;
-                //h2.GetComponent<UnityEngine.UI.Image>().sprite = full;
-                h3.GetComponent<UnityEngine.UI.Image>().sprite = empty;
-                break;
-            case 5:
-                
-                h3.GetComponent<UnityEngine.UI.Image>().sprite = half;
-                break;
-            default:
-                break;
-
+            numHearts = numHearts -  1;
         }
     }
 }
