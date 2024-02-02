@@ -1022,7 +1022,7 @@ PrefabInstance:
       objectReference: {fileID: 734292266}
     - target: {fileID: 3944204721938791477, guid: 9657dac963a21f549b33f7342e573104, type: 3}
       propertyPath: scene
-      value: Level 1
+      value: tutorial test
       objectReference: {fileID: 0}
     - target: {fileID: 3944204721938791477, guid: 9657dac963a21f549b33f7342e573104, type: 3}
       propertyPath: SceneChange

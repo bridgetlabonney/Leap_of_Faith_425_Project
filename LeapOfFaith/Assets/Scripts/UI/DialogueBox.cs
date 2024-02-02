@@ -41,7 +41,7 @@ public class DialogueBox : MonoBehaviour
         }
         else
         {
-            if (txtcnt == d.words.Length && Input.anyKeyDown == true)
+            if (txtcnt == d.words.Length && Input.GetMouseButtonDown(0))
             {
                 if (SceneChange)
                 {
@@ -85,7 +85,7 @@ public class DialogueBox : MonoBehaviour
             StartCoroutine(typewriter(t));
             if (!Tutorial)
             {
-                yield return new WaitUntil(() => Input.anyKeyDown == true);
+                yield return new WaitUntil(() => Input.GetMouseButtonDown(0));
             }
             else
             {
