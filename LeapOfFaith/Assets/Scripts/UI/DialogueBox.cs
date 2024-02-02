@@ -34,7 +34,10 @@ public class DialogueBox : MonoBehaviour
     {
         if (Tutorial)
         {
-            if (txtcnt == d.words.Length && Input.GetMouseButtonDown(0));
+            if (txtcnt == d.words.Length && Input.GetMouseButtonDown(0))
+            {
+                box.SetActive(false);
+            }
         }
         else
         {
