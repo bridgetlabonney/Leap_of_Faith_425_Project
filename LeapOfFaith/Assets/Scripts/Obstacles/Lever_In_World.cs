@@ -5,10 +5,11 @@ using UnityEngine;
 public class Lever_In_World : MonoBehaviour
 {
     [SerializeField] private GameObject door;
+    AudioSource sound;
     // Start is called before the first frame update
     void Start()
     {
-        
+        sound = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -26,6 +27,8 @@ public class Lever_In_World : MonoBehaviour
             {
                 print("Key down");
                 door.SetActive(false);
+                sound.Play();
+                
             }
         }
     }
