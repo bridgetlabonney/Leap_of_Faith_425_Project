@@ -8,7 +8,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/DemoWorld.unity
     guid: 022fa510f35b3fc408af96b8be4b0935
+  - enabled: 1
+    path: Assets/Scenes/story test.unity
+    guid: c5bf0c80bd8c4994dbfde5afd469ea80
+  - enabled: 1
+    path: Assets/Scenes/Game Over.unity
+    guid: 5eb4b3664eae3a9468d9bd78da9d4cae
+  - enabled: 1
+    path: Assets/Scenes/Level 1.unity
+    guid: 3c3a6e3e22dddf04f84b049f2d745bdc
   m_configObjects: {}
