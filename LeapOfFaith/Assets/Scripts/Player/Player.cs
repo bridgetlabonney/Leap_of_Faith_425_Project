@@ -48,14 +48,12 @@ public class Player : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
             //enters jump state when jumping
-            animations.SetInteger("Jump", 1);
         }
 
         if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
         {
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
             //exit jump state when not jumping
-            animations.SetInteger("Jump", 0);
         }
         Flip();
     }
@@ -70,6 +68,14 @@ public class Player : MonoBehaviour
         else
         {
             animations.SetBool("IsWalking", false);
+        }
+        if (rb.velocity.y > 0)
+        {
+            animations.SetInteger("Jump", 1);
+        }
+        else
+        {
+            animations.SetInteger("Jump", 0);
         }
     }
 
