@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 3321024052353332744}
   - component: {fileID: 3321024052353332756}
   m_Layer: 6
-  m_Name: Square
+  m_Name: lever
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

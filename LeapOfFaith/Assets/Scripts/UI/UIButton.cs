@@ -15,4 +15,12 @@ public class UIButton : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void restartFromCheckpoint()
+    {
+        //get player's current checkpointpos
+        //may have to play with cameras
+        //set player's current position to checkpointpos
+
+    }
 }
