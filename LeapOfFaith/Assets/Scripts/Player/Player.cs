@@ -63,13 +63,13 @@ public class Player : MonoBehaviour
     private void FixedUpdate()
     {
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
-        if (rb.velocity.x > 0 && animations.GetBool("isFalling") != true && animations.GetInteger("Jump") < 1)
+        if (rb.velocity.x > 0 && animations.GetBool("isFalling") != true)
         {
-            animations.SetBool("isWalking", true);
+            animations.SetBool("IsWalking", true);
         }
         else
         {
-            animations.SetBool("isWalking", false);
+            animations.SetBool("IsWalking", false);
         }
     }
 
