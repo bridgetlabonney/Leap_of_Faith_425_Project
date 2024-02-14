@@ -7,6 +7,7 @@ public class Lever_In_World : MonoBehaviour
     [SerializeField] private GameObject door;
     AudioSource sound;
     Animator anim;
+    bool switched = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,16 +22,23 @@ public class Lever_In_World : MonoBehaviour
     }
     void OnTriggerStay2D(Collider2D col)
     {
-        print("Entered trigger");
-        if (col.CompareTag("Player"))
+        if (col.CompareTag("Player") && switched == false)
         {
-            print("tag succesful");
             if (Input.GetKeyDown(KeyCode.F))
             {
-                print("Key down");
+                switched = true;
                 door.SetActive(false);
-                sound.Play();
                 anim.SetBool("switch", true);
+                sound.Play();
+                
+                
+            }
+        if (col.CompareTag("Player") && switched == true)
+            {
+                switched = false;
+                door.SetActive(true);
+                anim.SetBool("switch", false);
+                sound.Play();
                 
             }
         }
