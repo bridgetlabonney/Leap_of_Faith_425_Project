@@ -5,7 +5,6 @@ using UnityEngine;
 
 //TODO
 //health upgrades?
-//enable/disable for cutscenes.
 //array shenanigans (using GameObject[] h instead of 3)
 //iframes
 
@@ -47,5 +46,17 @@ public class HUD : MonoBehaviour
 
             numHearts = numHearts -  1;
         }
+
+        checkDeath();
+    }
+
+    //used elsewhere, so seperaated as a method
+    public bool checkDeath()
+    {
+        if (player.health <= 0)
+        {
+            return true;
+        }
+        else return false;
     }
 }
