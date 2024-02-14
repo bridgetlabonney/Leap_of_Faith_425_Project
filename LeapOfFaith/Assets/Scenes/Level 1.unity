@@ -2801,6 +2801,10 @@ PrefabInstance:
       value: CM vcam2 (2)
       objectReference: {fileID: 0}
     - target: {fileID: 5551677539895690051, guid: b2b30aedca1a0424faad924407f99952, type: 3}
+      propertyPath: m_Priority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5551677539895690051, guid: b2b30aedca1a0424faad924407f99952, type: 3}
       propertyPath: m_Lens.OrthographicSize
       value: 25
       objectReference: {fileID: 0}
@@ -6266,6 +6270,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CM vcam2 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5551677539895690051, guid: b2b30aedca1a0424faad924407f99952, type: 3}
+      propertyPath: m_Priority
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b2b30aedca1a0424faad924407f99952, type: 3}
 --- !u!1 &1651756338
@@ -8748,6 +8756,10 @@ PrefabInstance:
     - target: {fileID: 5274526775864499746, guid: b2b30aedca1a0424faad924407f99952, type: 3}
       propertyPath: m_Name
       value: CM vcam2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5551677539895690051, guid: b2b30aedca1a0424faad924407f99952, type: 3}
+      propertyPath: m_Priority
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b2b30aedca1a0424faad924407f99952, type: 3}

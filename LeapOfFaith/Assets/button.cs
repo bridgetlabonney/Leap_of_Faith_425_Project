@@ -2,17 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Lever_In_World : MonoBehaviour
+public class button : MonoBehaviour
 {
     [SerializeField] private GameObject door;
     AudioSource sound;
-    Animator anim;
+    //Animator anim;
     bool switched = false;
     // Start is called before the first frame update
     void Start()
     {
         sound = GetComponent<AudioSource>();
-        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -28,7 +27,6 @@ public class Lever_In_World : MonoBehaviour
             {
                 switched = true;
                 door.SetActive(false);
-                anim.SetBool("switch", true);
                 sound.Play();
 
 
@@ -39,10 +37,7 @@ public class Lever_In_World : MonoBehaviour
                 {
                     switched = true;
                     door.SetActive(false);
-                    anim.SetBool("switch", true);
                     sound.Play();
-
-
                 }
             }
         }
