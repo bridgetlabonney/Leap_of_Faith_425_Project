@@ -14,7 +14,7 @@ public class Player : MonoBehaviour
     private float jumpingPower = 16f;
     private bool isFacingRight = true;
 
-
+    public int health;
     private bool isWallSliding;
     private float wallSlidingSpeed = 2f;
 
@@ -37,7 +37,7 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        health = 3;
     }
 
     // Update is called once per frame
