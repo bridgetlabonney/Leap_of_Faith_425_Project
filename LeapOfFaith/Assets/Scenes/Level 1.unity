@@ -7482,7 +7482,7 @@ GameObject:
   - component: {fileID: 1863188150}
   - component: {fileID: 1863188149}
   - component: {fileID: 1863188148}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Floor (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8624,6 +8624,10 @@ PrefabInstance:
     - target: {fileID: 1884897218025947657, guid: a60c511172b0f194db1313a037a29b96, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1884897218025947666, guid: a60c511172b0f194db1313a037a29b96, type: 3}
+      propertyPath: wallLayer.m_Bits
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1884897218025947667, guid: a60c511172b0f194db1313a037a29b96, type: 3}
       propertyPath: m_Name

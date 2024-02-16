@@ -38,6 +38,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         health = 3;
+        animations = GetComponent<Animator>();
     }
 
     // Update is called once per frame
