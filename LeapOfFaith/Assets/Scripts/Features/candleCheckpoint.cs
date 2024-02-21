@@ -31,6 +31,8 @@ public class candleCheckpoint : MonoBehaviour
         {
             crossed = true;
             c.checkpoint(checkpointpos);
+            lighton = true;
+            StartCoroutine(turnLight());
         }
 
         if (Input.GetKeyDown(KeyCode.F) && lighton == false)

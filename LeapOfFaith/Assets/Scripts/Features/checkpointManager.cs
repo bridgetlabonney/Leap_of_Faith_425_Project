@@ -8,6 +8,7 @@ public class checkpointManager : MonoBehaviour
 {
     public Vector3 respawnpos;
     public HUD hud;
+    public bool continued = false;
     public Player p;
     // Start is called before the first frame update
     void Start()
@@ -30,7 +31,16 @@ public class checkpointManager : MonoBehaviour
         //place character at respawnpos
         if(hud.checkDeath())
         {
-           //confirm player has hit "continue"
+            //confirm player has hit "continue"
+            if (continued)
+            {
+                //playerpos = respawnpos
+                p.transform.position = respawnpos;
+            }
+            else
+            {
+                //set respawnpos to default
+            }
           
         }
     }

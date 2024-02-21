@@ -9,6 +9,7 @@ public class EscMenu : MonoBehaviour
 
    public GameObject menu;
     public bool menuEnabled = false;
+    
    
     // Start is called before the first frame update
     void Start()
@@ -35,7 +36,7 @@ public class EscMenu : MonoBehaviour
             }
             else
             {
-                Time.timeScale = 0;
+                Time.timeScale = 1;
                 menu.SetActive(false);
                 
             }
