@@ -12,16 +12,20 @@ public class candleCheckpoint : MonoBehaviour
     public LightEmit candle;
     public Vector3 checkpointpos;
     public checkpointManager c;
+    private Animator anim;
     IEnumerator turnLight()
     {
         candle.light_enabled = true;
+        anim.SetBool("IsOn", true);
         yield return new WaitForSecondsRealtime(7);
         candle.light_enabled = false;
+        anim.SetBool("IsOn", false);
     }
 
     private void Start()
     {
         checkpointpos = this.transform.position;
+        anim = GetComponent<Animator>();
     }
 
     private void Update()
@@ -37,6 +41,7 @@ public class candleCheckpoint : MonoBehaviour
             crossed = true;
             c.checkpoint(checkpointpos);
             lighton = true;
+            anim.SetBool("IsOn", true);
             StartCoroutine(turnLight());
         }
     }
@@ -51,6 +56,7 @@ public class candleCheckpoint : MonoBehaviour
 
         }
         lighton = false;
+        //anim.SetBool("IsOn", false);
     }
 
 
