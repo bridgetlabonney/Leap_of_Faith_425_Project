@@ -19,5 +19,10 @@ public class UIButton : MonoBehaviour
         Application.Quit();
     }
 
-    
+    //runs once slider changes & on pressing start
+    public void enableOptions()
+    {
+        AudioListener.volume = PlayerPrefs.GetFloat("volume");
+
+    }
 }

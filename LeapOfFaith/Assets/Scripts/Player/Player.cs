@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using IndieMarc.Darkness;
 
 
 //TODO
@@ -13,11 +14,10 @@ public class Player : MonoBehaviour
     private float speed = 8f;
     private float jumpingPower = 16f;
     private bool isFacingRight = true;
-
     public int health;
     private bool isWallSliding;
     private float wallSlidingSpeed = 2f;
-
+    [SerializeField] private LightEmit l;
     private bool isWallJumping;
     private float wallJumpingDirection;
     private float wallJumpingTime = 0.2f;
@@ -39,6 +39,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         health = 3;
+        l.radius = PlayerPrefs.GetInt("lightRadius", 3);
         animations = GetComponent<Animator>();
     }
 
