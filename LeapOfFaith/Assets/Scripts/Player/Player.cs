@@ -27,6 +27,7 @@ public class Player : MonoBehaviour
 
     private Animator animations;
 
+    public Vector3 checkpointpos;
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;

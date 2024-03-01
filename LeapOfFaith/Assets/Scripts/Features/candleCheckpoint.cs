@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using IndieMarc.Darkness;
 
+
+
 public class candleCheckpoint : MonoBehaviour
 {
     bool lighton;
@@ -17,7 +19,10 @@ public class candleCheckpoint : MonoBehaviour
         candle.light_enabled = false;
     }
 
-    
+    private void Start()
+    {
+        checkpointpos = this.transform.position;
+    }
 
     private void Update()
     {
@@ -34,21 +39,20 @@ public class candleCheckpoint : MonoBehaviour
             lighton = true;
             StartCoroutine(turnLight());
         }
+    }
 
+    public void OnTriggerStay2D(Collider2D collision)
+    {
         if (Input.GetKeyDown(KeyCode.F) && lighton == false)
         {
             lighton = true;
             StartCoroutine(turnLight());
-           
+
 
         }
         lighton = false;
     }
 
-    public void Respawn()
-    {
-
-    }
 
 
 }

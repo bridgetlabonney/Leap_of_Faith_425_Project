@@ -36,6 +36,6 @@ public class Obstacle : MonoBehaviour
     public void OnTriggerEnter2D(Collider2D collision)
     {
         player.health = player.health - dmg;
-        if (player.health <= 0) SceneManager.LoadScene("Game Over");
+        
     }
 }

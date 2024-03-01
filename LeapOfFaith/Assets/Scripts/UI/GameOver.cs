@@ -7,8 +7,7 @@ public class GameOver : MonoBehaviour
 
         public GameObject menu;
         public HUD HUD;
-        public bool menuEnabled = false;
-        public checkpointManager check;
+        
 
         // Start is called before the first frame update
         void Start()
@@ -24,22 +23,10 @@ public class GameOver : MonoBehaviour
 
         void toggleMenu()
         {
-            if (HUD.checkDeath())
+            if (HUD.dead)
             {
-                menuEnabled = !menuEnabled;
-                if (!menuEnabled)
-                {
-                    Time.timeScale = 0;
-                    menu.SetActive(true);
-
-                }
-                else
-                {
-                    Time.timeScale = 1;
-                    menu.SetActive(false);
-
-                }
-
+            Time.timeScale = 0;
+            menu.SetActive(true);
             }
         }
 }

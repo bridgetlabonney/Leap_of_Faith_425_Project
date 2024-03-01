@@ -14,7 +14,9 @@ public class HUD : MonoBehaviour
     public GameObject[] h;
     private int numHearts; 
     public Player player;
+    public bool dead = false;
     public Sprite empty;
+    public Sprite full;
     // Start is called before the first frame update
     void Start()
     {
@@ -37,8 +39,6 @@ public class HUD : MonoBehaviour
     void healthConfig(int health)
     {
         
-        print(numHearts);
-        print(player.health);
          if(health < numHearts)
         {
             // h1.GetComponent<UnityEngine.UI.Image>().sprite
@@ -46,17 +46,29 @@ public class HUD : MonoBehaviour
 
             numHearts = numHearts -  1;
         }
-
-        checkDeath();
+        if (!dead)
+        {
+            checkDeath();
+        }
     }
 
     //used elsewhere, so seperaated as a method
-    public bool checkDeath()
+    public void checkDeath()
     {
         if (player.health <= 0)
         {
-            return true;
+            dead = true;
         }
-        else return false;
+        else dead = false;
+    }
+
+    public void resetHUD()
+    {
+        for(int i = 0; i< h.Length; i++)
+        {
+            numHearts = h.Length;
+            dead = false;
+            h[i].GetComponent<UnityEngine.UI.Image>().sprite = full;
+        }
     }
 }

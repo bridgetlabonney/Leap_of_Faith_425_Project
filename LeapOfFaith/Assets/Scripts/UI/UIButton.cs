@@ -7,6 +7,9 @@ public class UIButton : MonoBehaviour
     //loads whatever scene matches the string name
    public void changeScene(string scene)
     {
+        //this doesn't change anything other than fixing a pause menu bug :)
+        Time.timeScale = 1;
+        
         SceneManager.LoadScene(scene);
     }
 
@@ -16,11 +19,5 @@ public class UIButton : MonoBehaviour
         Application.Quit();
     }
 
-    public void restartFromCheckpoint()
-    {
-        //get player's current checkpointpos
-        //may have to play with cameras
-        //set player's current position to checkpointpos
-
-    }
+    
 }
