@@ -44,12 +44,14 @@ public class HUD : MonoBehaviour
             // h1.GetComponent<UnityEngine.UI.Image>().sprite
             h[numHearts - 1].GetComponent<UnityEngine.UI.Image>().sprite = empty;
 
-            numHearts = numHearts -  1;
+            numHearts = health;
         }
         if (!dead)
         {
             checkDeath();
         }
+        Debug.Log(numHearts);
+        Debug.Log(player.health);
     }
 
     //used elsewhere, so seperaated as a method
@@ -64,11 +66,12 @@ public class HUD : MonoBehaviour
 
     public void resetHUD()
     {
-        for(int i = 0; i< h.Length; i++)
+        for(int i = 0; i < h.Length; i++)
         {
             numHearts = h.Length;
             dead = false;
             h[i].GetComponent<UnityEngine.UI.Image>().sprite = full;
         }
+        player.health = h.Length;
     }
 }

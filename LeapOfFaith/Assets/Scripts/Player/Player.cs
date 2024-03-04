@@ -26,6 +26,7 @@ public class Player : MonoBehaviour
     private Vector2 wallJumpingPower = new Vector2(2f, 16f);
 
     private Animator animations;
+    
 
     public Vector3 checkpointpos;
 

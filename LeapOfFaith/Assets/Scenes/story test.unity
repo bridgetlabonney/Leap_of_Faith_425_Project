@@ -229,6 +229,11 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &169829789 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7081096048252576767, guid: 9657dac963a21f549b33f7342e573104, type: 3}
+  m_PrefabInstance: {fileID: 7081096048558757726}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &295553803
 GameObject:
   m_ObjectHideFlags: 0
@@ -1021,8 +1026,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 734292266}
     - target: {fileID: 3944204721938791477, guid: 9657dac963a21f549b33f7342e573104, type: 3}
+      propertyPath: box
+      value: 
+      objectReference: {fileID: 169829789}
+    - target: {fileID: 3944204721938791477, guid: 9657dac963a21f549b33f7342e573104, type: 3}
       propertyPath: scene
-      value: tutorial test
+      value: Level 1
       objectReference: {fileID: 0}
     - target: {fileID: 3944204721938791477, guid: 9657dac963a21f549b33f7342e573104, type: 3}
       propertyPath: SceneChange
@@ -1111,6 +1120,10 @@ PrefabInstance:
     - target: {fileID: 7081096049488520596, guid: 9657dac963a21f549b33f7342e573104, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7081096049488520598, guid: 9657dac963a21f549b33f7342e573104, type: 3}
+      propertyPath: m_ScaleFactor
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7081096049488520599, guid: 9657dac963a21f549b33f7342e573104, type: 3}
       propertyPath: m_Camera

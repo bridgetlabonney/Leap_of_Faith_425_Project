@@ -6,14 +6,15 @@ using UnityEngine.SceneManagement;
 public class Obstacle : MonoBehaviour
 {
 
-   public int dmg;
-   public int type;
+    public int dmg;
+    public int type;
+    public bool hurt;
     public Player player;
     // Start is called before the first frame update
     void Start()
     {
         //init type of obstacle
-        switch(type)
+        switch (type)
         {
             case 0: //default: 0 dmg log (needs to be jumped over)
                 dmg = 0;
@@ -30,12 +31,22 @@ public class Obstacle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        player.health = player.health - dmg;
-        
+        if (!hurt)
+        {
+            player.health = player.health - dmg;
+        }
+        StartCoroutine(iframes());
+    }
+
+    IEnumerator iframes()
+    {
+        hurt = true;
+      yield return new WaitForSeconds(1.5f);
+        hurt = false;
     }
 }
