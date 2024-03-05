@@ -7,7 +7,7 @@ public class button : MonoBehaviour
     [SerializeField] private GameObject door;
     AudioSource sound;
     //Animator anim;
-    bool switched = false;
+    public bool switched = false;
     // Start is called before the first frame update
     void Start()
     {
