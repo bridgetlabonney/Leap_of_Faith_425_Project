@@ -6,11 +6,10 @@ public class teleport : MonoBehaviour
 {
     [SerializeField] GameObject Player;
     [SerializeField] GameObject destination;
-    //Player player;
+    [SerializeField] Vector3 offset;
     // Start is called before the first frame update
     void Start()
     {
-        //player = Player.GetComponent<Player>();
     }
 
     // Update is called once per frame
@@ -36,7 +35,7 @@ public class teleport : MonoBehaviour
         Debug.Log("Coroutine");
         Player.SetActive(false);
         yield return new WaitForSeconds(0.01f);
-        Player.transform.position = des + new Vector3(-2f, 0f); //Position of destination
+        Player.transform.position = des + offset; //Position of destination
         yield return new WaitForSeconds(0.01f);
         Player.SetActive(true);
     }
