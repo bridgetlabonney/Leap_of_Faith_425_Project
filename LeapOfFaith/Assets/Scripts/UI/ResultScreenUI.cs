@@ -1,15 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
-public class Goal : MonoBehaviour
+public class ResultScreenUI : MonoBehaviour
 {
-    public bool hit;
     // Start is called before the first frame update
+    public Text scoreText;
+    public Text timerText;
+
     void Start()
     {
-        hit = false;
+        
     }
 
     // Update is called once per frame
@@ -18,8 +20,8 @@ public class Goal : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    public void loadScreen()
     {
-        hit = true;
+
     }
 }

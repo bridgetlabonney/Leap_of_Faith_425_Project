@@ -1,15 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class Goal : MonoBehaviour
+public class CollectibleManager : MonoBehaviour
 {
-    public bool hit;
     // Start is called before the first frame update
+    public ScoreManager sm;
     void Start()
     {
-        hit = false;
+        
     }
 
     // Update is called once per frame
@@ -18,8 +17,8 @@ public class Goal : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    public void addScore(int score)
     {
-        hit = true;
+        sm.addCScore(score);
     }
 }
