@@ -8,20 +8,10 @@ public class ResultScreenUI : MonoBehaviour
     // Start is called before the first frame update
     public Text scoreText;
     public Text timerText;
-
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public GameObject menu;
 
     public void loadScreen()
     {
-
+        menu.SetActive(true);
     }
 }

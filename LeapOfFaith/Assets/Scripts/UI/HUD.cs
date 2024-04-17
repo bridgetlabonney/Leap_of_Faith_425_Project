@@ -50,8 +50,7 @@ public class HUD : MonoBehaviour
         {
             checkDeath();
         }
-        Debug.Log(numHearts);
-        Debug.Log(player.health);
+        
     }
 
     //used elsewhere, so seperaated as a method

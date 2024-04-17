@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using IndieMarc.Darkness;
 
 public class collectible : MonoBehaviour { 
 
     public int point_value;
     public CollectibleManager cm;
     public AudioSource pickup;
-    
+    public LightEmit light;
     
     void Start()
     {
@@ -24,6 +25,7 @@ public class collectible : MonoBehaviour {
     {
         cm.addScore(point_value);
         pickup.Play();
+        light.light_enabled = false; //apparently the light will still be there even if you disable the game object???
         this.gameObject.SetActive(false);
     }
 }
