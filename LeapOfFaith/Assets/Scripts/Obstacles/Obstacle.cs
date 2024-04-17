@@ -46,7 +46,9 @@ public class Obstacle : MonoBehaviour
     IEnumerator iframes()
     {
         hurt = true;
+        player.GetComponent<Animator>().SetBool("takeHit", true);
       yield return new WaitForSeconds(1.5f);
+        player.GetComponent<Animator>().SetBool("takeHit", false);
         hurt = false;
     }
 }
