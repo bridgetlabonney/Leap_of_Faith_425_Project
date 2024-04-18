@@ -31,6 +31,7 @@ public class ScoreManager : MonoBehaviour
         if(g.hit) //check for the goal getting hit
         {
             loadTotals(); //load result screen
+            g.hit = false;
         }
 
     }
@@ -50,15 +51,16 @@ public class ScoreManager : MonoBehaviour
 
         timerOn = false;
         //calculate final score
-        score = ((cscore * 100) + 100)/ (jumps/4);
+        jumps++;
+        score = ((cscore * 100) + 100) / (jumps / 4);
         //convert timer into a more readable thing
         //this code was ripped from: https://www.gamedev.net/forums/topic/702432-unity-how-to-make-a-ui-timer-beginners-guide-c-script/
         int minutes = Mathf.FloorToInt(timer / 60F);
         int seconds = Mathf.FloorToInt(timer % 60F);
         //end of ripped code
         //load into UI
-        menu.timerText.text = timer.ToString();
-        menu.scoreText.text = score.ToString();
+        menu.timerText.text += minutes.ToString() + ":" + seconds.ToString();
+        menu.scoreText.text += score.ToString();
         menu.loadScreen();
     }
 }
