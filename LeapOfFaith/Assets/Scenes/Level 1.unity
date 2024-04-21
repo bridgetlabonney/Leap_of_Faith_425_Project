@@ -8426,6 +8426,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1987639807 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 721677856924747145, guid: 19e17f4a26e17a047a2f5fb093439d08, type: 3}
+  m_PrefabInstance: {fileID: 2116618993}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2116618997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 204cee0817eb3f14281998f10a42e974, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2004514448
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9226,6 +9237,10 @@ PrefabInstance:
       propertyPath: l
       value: 
       objectReference: {fileID: 1884897217881431676}
+    - target: {fileID: 1884897218025947666, guid: a60c511172b0f194db1313a037a29b96, type: 3}
+      propertyPath: sm
+      value: 
+      objectReference: {fileID: 1987639807}
     - target: {fileID: 1884897218025947666, guid: a60c511172b0f194db1313a037a29b96, type: 3}
       propertyPath: wallLayer.m_Bits
       value: 8
