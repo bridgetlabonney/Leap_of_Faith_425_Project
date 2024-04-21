@@ -35,7 +35,7 @@ public class teleport : MonoBehaviour
         Debug.Log("Coroutine");
         Player.SetActive(false);
         yield return new WaitForSeconds(0.01f);
-        Player.transform.position = des + offset; //Position of destination
+        Player.transform.position = des - offset; //Position of destination
         yield return new WaitForSeconds(0.01f);
         Player.SetActive(true);
     }
