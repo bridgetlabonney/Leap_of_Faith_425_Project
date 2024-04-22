@@ -1236,9 +1236,9 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 579251628}
-        m_TargetAssemblyTypeName: UIButton, Assembly-CSharp
-        m_MethodName: enableOptions
+      - m_Target: {fileID: 579251629}
+        m_TargetAssemblyTypeName: VolumeSlider, Assembly-CSharp
+        m_MethodName: volume
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
