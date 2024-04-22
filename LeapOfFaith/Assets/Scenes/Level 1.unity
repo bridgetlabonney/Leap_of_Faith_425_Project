@@ -8855,6 +8855,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Control Module
       objectReference: {fileID: 0}
+    - target: {fileID: 6650220663127185363, guid: 19e17f4a26e17a047a2f5fb093439d08, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 19859210}
+    - target: {fileID: 6650220663127185363, guid: 19e17f4a26e17a047a2f5fb093439d08, type: 3}
+      propertyPath: m_SortingOrder
+      value: 999
+      objectReference: {fileID: 0}
+    - target: {fileID: 6650220663127185363, guid: 19e17f4a26e17a047a2f5fb093439d08, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1502599955
+      objectReference: {fileID: 0}
     - target: {fileID: 8112402803465372811, guid: 19e17f4a26e17a047a2f5fb093439d08, type: 3}
       propertyPath: m_Camera
       value: 
@@ -8879,6 +8891,18 @@ PrefabInstance:
       propertyPath: menu
       value: 
       objectReference: {fileID: 1245517360}
+    - target: {fileID: 8902245504773282255, guid: 19e17f4a26e17a047a2f5fb093439d08, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 19859210}
+    - target: {fileID: 8902245504773282255, guid: 19e17f4a26e17a047a2f5fb093439d08, type: 3}
+      propertyPath: m_SortingOrder
+      value: 999
+      objectReference: {fileID: 0}
+    - target: {fileID: 8902245504773282255, guid: 19e17f4a26e17a047a2f5fb093439d08, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1502599955
+      objectReference: {fileID: 0}
     - target: {fileID: 9105079224176062663, guid: 19e17f4a26e17a047a2f5fb093439d08, type: 3}
       propertyPath: p
       value: 
