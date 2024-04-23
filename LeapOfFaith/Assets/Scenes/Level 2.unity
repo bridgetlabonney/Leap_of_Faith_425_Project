@@ -12140,6 +12140,14 @@ PrefabInstance:
       propertyPath: menu
       value: 
       objectReference: {fileID: 5524601319163782201}
+    - target: {fileID: 929656561905304607, guid: 19e17f4a26e17a047a2f5fb093439d08, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: Level 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3109657323149642243, guid: 19e17f4a26e17a047a2f5fb093439d08, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: Level 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5524601319834735529, guid: 19e17f4a26e17a047a2f5fb093439d08, type: 3}
       propertyPath: m_RootOrder
       value: 16
@@ -12200,6 +12208,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 160379499}
+    - target: {fileID: 6650220663127185366, guid: 19e17f4a26e17a047a2f5fb093439d08, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8112402803465372811, guid: 19e17f4a26e17a047a2f5fb093439d08, type: 3}
       propertyPath: m_Camera
       value: 
