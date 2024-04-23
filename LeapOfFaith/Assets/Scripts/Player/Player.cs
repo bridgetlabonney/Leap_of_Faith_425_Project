@@ -44,6 +44,7 @@ public class Player : MonoBehaviour
         l.radius = PlayerPrefs.GetInt("lightRadius", 3);
         animations = GetComponent<Animator>();
         Time.timeScale = 1;
+        gameObject.tag = "Player";
     }
 
     // Update is called once per frame
