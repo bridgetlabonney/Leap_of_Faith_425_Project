@@ -36,18 +36,19 @@ public class Obstacle : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!hurt)
+        if (!hurt && collision.tag == "Player")
         {
             player.health = player.health - dmg;
+            StartCoroutine(iframes());
         }
-        StartCoroutine(iframes());
+        
     }
 
     IEnumerator iframes()
     {
         hurt = true;
         player.GetComponent<Animator>().SetBool("takeHit", true);
-      yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(1.5f);
         player.GetComponent<Animator>().SetBool("takeHit", false);
         hurt = false;
     }

@@ -16,8 +16,6 @@ public class Bat : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         currentPoint = Point1B.transform;
-        anim.SetBool("Moving", true);
-        gameObject.tag = "Enemy";
     }
 
     // Update is called once per frame
