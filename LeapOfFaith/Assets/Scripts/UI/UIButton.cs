@@ -23,6 +23,5 @@ public class UIButton : MonoBehaviour
     public void enableOptions()
     {
         AudioListener.volume = PlayerPrefs.GetFloat("volume");
-
     }
 }

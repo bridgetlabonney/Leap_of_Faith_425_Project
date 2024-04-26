@@ -51,8 +51,7 @@ public class ScoreManager : MonoBehaviour
 
         timerOn = false;
         //calculate final score
-        jumps++;
-        score = ((cscore * 100) + 100) / (jumps / 4);
+        score = ((cscore * 100) + 100) - jumps;
         //convert timer into a more readable thing
         //this code was ripped from: https://www.gamedev.net/forums/topic/702432-unity-how-to-make-a-ui-timer-beginners-guide-c-script/
         int minutes = Mathf.FloorToInt(timer / 60F);
