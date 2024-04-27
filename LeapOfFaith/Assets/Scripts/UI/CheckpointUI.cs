@@ -10,6 +10,7 @@ public class CheckpointUI : MonoBehaviour
     public void respawnAtCheckpoint()
     {
         c.respawn();
+        Time.timeScale = 1; //this should fix a weird non-clickable bug?
         menu.SetActive(false);
     }
 }

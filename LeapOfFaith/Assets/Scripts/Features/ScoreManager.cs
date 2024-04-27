@@ -58,7 +58,13 @@ public class ScoreManager : MonoBehaviour
         int seconds = Mathf.FloorToInt(timer % 60F);
         //end of ripped code
         //load into UI
-        menu.timerText.text += minutes.ToString() + ":" + seconds.ToString();
+        string secondsString;
+        if(seconds < 10)
+        {
+           secondsString = "0" + seconds.ToString();
+        }
+        else { secondsString = seconds.ToString(); }
+        menu.timerText.text += minutes.ToString() + ":" + secondsString;
         menu.scoreText.text += score.ToString();
         menu.loadScreen();
     }
