@@ -16612,7 +16612,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1884897218025947657, guid: a60c511172b0f194db1313a037a29b96, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -59.77
+      value: -54.88
       objectReference: {fileID: 0}
     - target: {fileID: 1884897218025947657, guid: a60c511172b0f194db1313a037a29b96, type: 3}
       propertyPath: m_LocalPosition.y
@@ -18279,15 +18279,15 @@ PrefabInstance:
       objectReference: {fileID: 637259540}
     - target: {fileID: 5020763684286853376, guid: ace8bb2a873920943a3c7857dfbdaa07, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 63
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5020763684460863569, guid: ace8bb2a873920943a3c7857dfbdaa07, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
-      value: MainMenu
+      value: BossBattle
       objectReference: {fileID: 0}
     - target: {fileID: 5020763684460863575, guid: ace8bb2a873920943a3c7857dfbdaa07, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ace8bb2a873920943a3c7857dfbdaa07, type: 3}
