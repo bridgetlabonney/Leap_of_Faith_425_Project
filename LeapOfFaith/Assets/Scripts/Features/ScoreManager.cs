@@ -64,8 +64,11 @@ public class ScoreManager : MonoBehaviour
            secondsString = "0" + seconds.ToString();
         }
         else { secondsString = seconds.ToString(); }
+        //technically also ripped from https://www.gamedev.net/forums/topic/702432-unity-how-to-make-a-ui-timer-beginners-guide-c-script/
+        //but modified so it actually displays correctly
         menu.timerText.text += minutes.ToString() + ":" + secondsString;
         menu.scoreText.text += score.ToString();
+        //end of second rip
         menu.loadScreen();
     }
 }
