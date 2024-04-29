@@ -8,6 +8,7 @@ TagManager:
   - Ground
   - WallLayer
   - FallingSpike
+  - Goal
   layers:
   - Default
   - TransparentFX

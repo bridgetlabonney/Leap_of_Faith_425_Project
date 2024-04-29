@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class ResultScreenUI : MonoBehaviour
 {
@@ -10,8 +11,14 @@ public class ResultScreenUI : MonoBehaviour
     public Text timerText;
     public GameObject menu;
 
+    public GameObject resultsFirstButton;
+
     public void loadScreen()
     {
         menu.SetActive(true);
+
+        EventSystem.current.SetSelectedGameObject(null);
+
+        EventSystem.current.SetSelectedGameObject(resultsFirstButton);
     }
 }

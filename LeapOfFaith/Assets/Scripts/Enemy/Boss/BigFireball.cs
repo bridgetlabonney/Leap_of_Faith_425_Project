@@ -30,7 +30,7 @@ public class BigFireball : MonoBehaviour
     {
         if(canGrow)
         {
-            transform.position = new Vector3(boss.transform.position.x, boss.transform.position.y + 2, 0);
+            transform.position = new Vector3(boss.transform.position.x, boss.transform.position.y + 2, 0); //makes it follow the boss
             temp = transform.localScale;
             temp.x += Time.deltaTime * 6;
             temp.y += Time.deltaTime * 6;
@@ -43,9 +43,9 @@ public class BigFireball : MonoBehaviour
             canGrow = false;
 
             Vector3 direction = player.transform.position - transform.position;
-            rb.velocity = new Vector2(direction.x * 0.01f, direction.y * 0.01f).normalized * force;
+            rb.velocity = new Vector2(direction.x * 1.0f, direction.y * 1.0f).normalized * force;
 
-            float rot = Mathf.Atan2(-direction.y * 0.01f, -direction.x * 0.01f) * Mathf.Rad2Deg;
+            float rot = Mathf.Atan2(-direction.y * 1.0f, -direction.x * 1.0f) * Mathf.Rad2Deg;
             transform.rotation = Quaternion.Euler(0, 0, rot);
         }
     }
@@ -54,7 +54,7 @@ public class BigFireball : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            other.gameObject.GetComponent<Player>().health -= 3;
+            other.gameObject.GetComponent<Player>().health -= 3; //Kills player instantly
         }
         else if (other.gameObject.CompareTag("Ground") || other.gameObject.CompareTag("WallLayer"))
         {

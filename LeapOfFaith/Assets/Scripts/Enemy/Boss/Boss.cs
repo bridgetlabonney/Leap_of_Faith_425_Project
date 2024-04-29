@@ -8,6 +8,9 @@ public class Boss : MonoBehaviour
     public GameObject fireball;
     public GameObject bigFireball;
     public GameObject fallingPlatform;
+    public GameObject fallingPlatform2;
+    public GameObject fallingPlatform3;
+    public GameObject goal;
     public Transform slamStart;
     public Transform fireballPos;
     public Transform bigFireballPos;
@@ -32,8 +35,6 @@ public class Boss : MonoBehaviour
 
     private float timer;
 
-    [SerializeField] private Transform vulnerableSpot;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -47,31 +48,90 @@ public class Boss : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-        if(timer > 2 && canFireball)
+        if(health == 3f) //phase 1
         {
-            timer = 0;
-            shoot();
-            timesShot += 1;
+            if (timer > 2 && canFireball)
+            {
+                timer = 0;
+                shoot();
+                timesShot += 1;
+            }
+
+
+            if (timesShot >= 1 && timesShot % 5 == 0)
+            {
+                timesShot = 0;
+                animations.SetTrigger("Attack");
+                StartCoroutine(BigFireball());
+            }
+
+            if (timesShotBig >= 3 && canFireball)
+            {
+                timesShot = 0;
+                timesShotBig = 0;
+                animations.SetTrigger("GroundSlam");
+                StartCoroutine(GroundSlam());
+            }
         }
 
-        if(health <= 0f)
+        if(health == 2f) //phase 2
+        {
+            if (timer > 1.5f && canFireball)
+            {
+                timer = 0;
+                shoot();
+                timesShot += 1;
+            }
+
+
+            if (timesShot >= 1 && timesShot % 7 == 0)
+            {
+                timesShot = 0;
+                animations.SetTrigger("Attack");
+                StartCoroutine(BigFireball());
+            }
+
+            if (timesShotBig >= 3 && canFireball)
+            {
+                timesShot = 0;
+                timesShotBig = 0;
+                animations.SetTrigger("GroundSlam");
+                StartCoroutine(GroundSlamP2());
+            }
+        }
+
+        if (health == 1f) //phase 3
+        {
+            if (timer > 1f && canFireball)
+            {
+                timer = 0;
+                shoot();
+                timesShot += 1;
+            }
+
+
+            if (timesShot >= 1 && timesShot % 10 == 0)
+            {
+                timesShot = 0;
+                animations.SetTrigger("Attack");
+                StartCoroutine(BigFireball());
+            }
+
+            if (timesShotBig >= 3 && canFireball)
+            {
+                timesShot = 0;
+                timesShotBig = 0;
+                animations.SetTrigger("GroundSlam");
+                StartCoroutine(GroundSlamP3());
+            }
+        }
+
+        if (health <= 0f && canFireball) //dead
         {
             animations.SetTrigger("Death");
             StartCoroutine(Death());
         }
 
-        if(timesShot >= 1 && timesShot % 5 == 0)
-        {
-            timesShot = 0;
-            animations.SetTrigger("Attack");
-            StartCoroutine(BigFireball());
-        }
-
-        if(timesShotBig >= 3 && canFireball)
-        {
-            animations.SetTrigger("GroundSlam");
-            StartCoroutine(GroundSlam());
-        }
     }
 
     void shoot()
@@ -82,10 +142,12 @@ public class Boss : MonoBehaviour
         }
     }
 
+
     void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Player") && !isInvuln)
         {
+            canFireball = false;
             health -= 1f;
             StartCoroutine(InvulnHit());
         }
@@ -111,10 +173,50 @@ public class Boss : MonoBehaviour
         co = StartCoroutine(StartFallingPlatforms());
     }
 
-    IEnumerator InvulnHit()
+    IEnumerator GroundSlamP2()
     {
         canFireball = false;
         isInvuln = true;
+        boxCollider.size = new Vector2(0.24f, 0.9f);
+        this.transform.position = new Vector3(slamStart.transform.position.x, slamStart.transform.position.y, slamStart.transform.position.z);
+        yield return new WaitForSeconds(1);
+        rb.velocity = new Vector2(55, 0);
+        yield return new WaitForSeconds(1);
+        rb.velocity = new Vector2(-55, 0);
+        yield return new WaitForSeconds(1);
+        rb.velocity = new Vector2(23, 0);
+        yield return new WaitForSeconds(1);
+        rb.velocity = new Vector2(0, 0);
+        this.transform.position = new Vector3(slamStart.transform.position.x, slamStart.transform.position.y, slamStart.transform.position.z);
+        boxCollider.size = new Vector2(0.83f, 0.9f);
+        isInvuln = false;
+        co = StartCoroutine(StartFallingPlatformsP2());
+    }
+
+    IEnumerator GroundSlamP3()
+    {
+        canFireball = false;
+        isInvuln = true;
+        boxCollider.size = new Vector2(0.24f, 0.9f);
+        this.transform.position = new Vector3(slamStart.transform.position.x, slamStart.transform.position.y, slamStart.transform.position.z);
+        yield return new WaitForSeconds(1);
+        rb.velocity = new Vector2(55, 0);
+        yield return new WaitForSeconds(1);
+        rb.velocity = new Vector2(-55, 0);
+        yield return new WaitForSeconds(1);
+        rb.velocity = new Vector2(23, 0);
+        yield return new WaitForSeconds(1);
+        rb.velocity = new Vector2(0, 0);
+        this.transform.position = new Vector3(slamStart.transform.position.x, slamStart.transform.position.y, slamStart.transform.position.z);
+        boxCollider.size = new Vector2(0.83f, 0.9f);
+        isInvuln = false;
+        co = StartCoroutine(StartFallingPlatformsP3());
+    }
+
+    IEnumerator InvulnHit()
+    {
+        isInvuln = true;
+        boxCollider.size = new Vector2(0.0f, 0.0f);
         animations.SetTrigger("IdleNoAttackDamage");
         StopCoroutine(co);
         for(int i = 0; i < 14; i++)
@@ -123,13 +225,15 @@ public class Boss : MonoBehaviour
             Destroy(fallingPlatform);
             yield return new WaitForSeconds(0.0001f);
         }
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(1.5f);
         rb.velocity = new Vector3(0, 0, 0);
         this.transform.position = new Vector3(slamStart.transform.position.x, slamStart.transform.position.y, slamStart.transform.position.z);
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1.5f);
+        boxCollider.size = new Vector2(0.83f, 0.9f);
         animations.SetTrigger("IdleNoAttackTimeUp");
         canFireball = true;
         isInvuln = false;
+        timer = 0;
     }
 
     IEnumerator Death()
@@ -137,6 +241,7 @@ public class Boss : MonoBehaviour
         canFireball = false;
         yield return new WaitForSeconds(2.5f);
         Destroy(gameObject);
+        goal.SetActive(true);
     }
 
     IEnumerator BigFireball()
@@ -171,6 +276,57 @@ public class Boss : MonoBehaviour
         }
         yield return new WaitForSeconds(5);
         animations.SetTrigger("IdleNoAttackTimeUp");
+        canFireball = true;
+
+    }
+
+    IEnumerator StartFallingPlatformsP2()
+    {
+        canFireball = false;
+        animations.SetTrigger("GroundSlamDone");
+        for (int i = 0; i < 10; i++)
+        {
+            Instantiate(fallingPlatform2, position1.position, Quaternion.identity);
+            Instantiate(fallingPlatform2, position6.position, Quaternion.identity);
+            yield return new WaitForSeconds(1.667f);
+            Instantiate(fallingPlatform2, position2.position, Quaternion.identity);
+            Instantiate(fallingPlatform2, position5.position, Quaternion.identity);
+            yield return new WaitForSeconds(1.667f);
+            Instantiate(fallingPlatform2, position3.position, Quaternion.identity);
+            Instantiate(fallingPlatform2, position4.position, Quaternion.identity);
+            yield return new WaitForSeconds(1.667f);
+            Instantiate(fallingPlatform2, position2.position, Quaternion.identity);
+            Instantiate(fallingPlatform2, position5.position, Quaternion.identity);
+            yield return new WaitForSeconds(1.667f);
+        }
+        yield return new WaitForSeconds(5);
+        animations.SetTrigger("IdleNoAttackTimeUp");
+        canFireball = true;
+
+    }
+
+    IEnumerator StartFallingPlatformsP3()
+    {
+        canFireball = false;
+        animations.SetTrigger("GroundSlamDone");
+        for (int i = 0; i < 10; i++)
+        {
+            Instantiate(fallingPlatform3, position1.position, Quaternion.identity);
+            Instantiate(fallingPlatform3, position6.position, Quaternion.identity);
+            yield return new WaitForSeconds(1.667f);
+            Instantiate(fallingPlatform3, position2.position, Quaternion.identity);
+            Instantiate(fallingPlatform3, position5.position, Quaternion.identity);
+            yield return new WaitForSeconds(1.667f);
+            Instantiate(fallingPlatform3, position3.position, Quaternion.identity);
+            Instantiate(fallingPlatform3, position4.position, Quaternion.identity);
+            yield return new WaitForSeconds(1.667f);
+            Instantiate(fallingPlatform3, position2.position, Quaternion.identity);
+            Instantiate(fallingPlatform3, position5.position, Quaternion.identity);
+            yield return new WaitForSeconds(1.667f);
+        }
+        yield return new WaitForSeconds(5);
+        animations.SetTrigger("IdleNoAttackTimeUp");
+        canFireball = true;
 
     }
 }

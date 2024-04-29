@@ -23,7 +23,7 @@ public class button : MonoBehaviour
     {
         if (col.CompareTag("Player") && switched == false)
         {
-            if (Input.GetKeyDown(KeyCode.F))
+            if (Input.GetKeyDown(KeyCode.F) || Input.GetKeyDown(KeyCode.JoystickButton2))
             {
                 switched = true;
                 door.SetActive(false);
@@ -33,7 +33,7 @@ public class button : MonoBehaviour
             }
             if (col.CompareTag("Player") && switched == true)
             {
-                if (Input.GetKeyDown(KeyCode.F))
+                if (Input.GetKeyDown(KeyCode.F) || Input.GetKeyDown(KeyCode.JoystickButton2))
                 {
                     switched = true;
                     door.SetActive(false);

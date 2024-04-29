@@ -10005,6 +10005,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 71
   m_LocalEulerAnglesHint: {x: 0, y: 0.411, z: -90}
+--- !u!1 &859061519 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3109657324875288565, guid: 19e17f4a26e17a047a2f5fb093439d08, type: 3}
+  m_PrefabInstance: {fileID: 1275905230}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &861266877
 GameObject:
   m_ObjectHideFlags: 0
@@ -11837,6 +11842,7 @@ MonoBehaviour:
   scoreText: {fileID: 1650263234}
   timerText: {fileID: 1396345262}
   menu: {fileID: 892337950}
+  resultsFirstButton: {fileID: 1712036314}
 --- !u!4 &1063161663 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5524601319834735529, guid: 19e17f4a26e17a047a2f5fb093439d08, type: 3}
@@ -14320,9 +14326,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1063161657}
     - target: {fileID: 929656561905304607, guid: 19e17f4a26e17a047a2f5fb093439d08, type: 3}
+      propertyPath: m_SpriteState.m_SelectedSprite
+      value: 
+      objectReference: {fileID: -697223426185652446, guid: 3316aabd5dd7e2743ad1214e35350560, type: 3}
+    - target: {fileID: 929656561905304607, guid: 19e17f4a26e17a047a2f5fb093439d08, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
       value: Level 4
       objectReference: {fileID: 0}
+    - target: {fileID: 929656562293588463, guid: 19e17f4a26e17a047a2f5fb093439d08, type: 3}
+      propertyPath: m_SpriteState.m_SelectedSprite
+      value: 
+      objectReference: {fileID: -697223426185652446, guid: 3316aabd5dd7e2743ad1214e35350560, type: 3}
+    - target: {fileID: 929656562463161119, guid: 19e17f4a26e17a047a2f5fb093439d08, type: 3}
+      propertyPath: m_SpriteState.m_SelectedSprite
+      value: 
+      objectReference: {fileID: -697223426185652446, guid: 3316aabd5dd7e2743ad1214e35350560, type: 3}
     - target: {fileID: 1185509856002228505, guid: 19e17f4a26e17a047a2f5fb093439d08, type: 3}
       propertyPath: c
       value: 
@@ -14332,9 +14350,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1680976115}
     - target: {fileID: 3109657323149642243, guid: 19e17f4a26e17a047a2f5fb093439d08, type: 3}
+      propertyPath: m_SpriteState.m_SelectedSprite
+      value: 
+      objectReference: {fileID: -697223426185652446, guid: 3316aabd5dd7e2743ad1214e35350560, type: 3}
+    - target: {fileID: 3109657323149642243, guid: 19e17f4a26e17a047a2f5fb093439d08, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
       value: Level 4
       objectReference: {fileID: 0}
+    - target: {fileID: 3109657324504413443, guid: 19e17f4a26e17a047a2f5fb093439d08, type: 3}
+      propertyPath: m_SpriteState.m_SelectedSprite
+      value: 
+      objectReference: {fileID: -697223426185652446, guid: 3316aabd5dd7e2743ad1214e35350560, type: 3}
+    - target: {fileID: 3109657324875288563, guid: 19e17f4a26e17a047a2f5fb093439d08, type: 3}
+      propertyPath: m_SpriteState.m_SelectedSprite
+      value: 
+      objectReference: {fileID: -697223426185652446, guid: 3316aabd5dd7e2743ad1214e35350560, type: 3}
     - target: {fileID: 4013467603568692997, guid: 19e17f4a26e17a047a2f5fb093439d08, type: 3}
       propertyPath: c
       value: 
@@ -14419,6 +14449,14 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 637259540}
+    - target: {fileID: 8795524455241143884, guid: 19e17f4a26e17a047a2f5fb093439d08, type: 3}
+      propertyPath: gameoverFirstButton
+      value: 
+      objectReference: {fileID: 2126338119}
+    - target: {fileID: 8810559215831827054, guid: 19e17f4a26e17a047a2f5fb093439d08, type: 3}
+      propertyPath: escFirstButton
+      value: 
+      objectReference: {fileID: 859061519}
     - target: {fileID: 8902245504773282250, guid: 19e17f4a26e17a047a2f5fb093439d08, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -18281,6 +18319,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5020763684286853383, guid: ace8bb2a873920943a3c7857dfbdaa07, type: 3}
+      propertyPath: m_SpriteState.m_SelectedSprite
+      value: 
+      objectReference: {fileID: -697223426185652446, guid: 3316aabd5dd7e2743ad1214e35350560, type: 3}
+    - target: {fileID: 5020763684460863569, guid: ace8bb2a873920943a3c7857dfbdaa07, type: 3}
+      propertyPath: m_SpriteState.m_SelectedSprite
+      value: 
+      objectReference: {fileID: -697223426185652446, guid: 3316aabd5dd7e2743ad1214e35350560, type: 3}
     - target: {fileID: 5020763684460863569, guid: ace8bb2a873920943a3c7857dfbdaa07, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
       value: BossBattle
@@ -19449,6 +19495,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 129
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1712036314 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5020763684286853377, guid: ace8bb2a873920943a3c7857dfbdaa07, type: 3}
+  m_PrefabInstance: {fileID: 1650263233}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1729081961
 GameObject:
   m_ObjectHideFlags: 0
@@ -23456,6 +23507,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2126338119 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 929656562293588457, guid: 19e17f4a26e17a047a2f5fb093439d08, type: 3}
+  m_PrefabInstance: {fileID: 1275905230}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2132010200
 PrefabInstance:
   m_ObjectHideFlags: 0
