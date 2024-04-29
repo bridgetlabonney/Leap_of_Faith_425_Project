@@ -1601,7 +1601,7 @@ MonoBehaviour:
   bigFireballPos: {fileID: 788683354}
   health: 3
   timesShot: 0
-  timesShotBig: 3
+  timesShotBig: 0
   position1: {fileID: 162215015}
   position2: {fileID: 3648693}
   position3: {fileID: 768884683}

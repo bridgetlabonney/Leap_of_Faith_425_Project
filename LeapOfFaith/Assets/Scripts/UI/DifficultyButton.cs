@@ -16,7 +16,7 @@ public class DifficultyButton : MonoBehaviour
     public void setdifficulty()
     {
         PlayerPrefs.SetInt("lightRadius", dif);
-        button.interactable = false;
+        //button.interactable = false;
         Debug.Log(PlayerPrefs.GetInt("lightRadius", 3));
 
         
@@ -29,7 +29,7 @@ public class DifficultyButton : MonoBehaviour
         {
             button.interactable = true;
         }
-        else button.interactable = false;
+        //else button.interactable = false;
 
     }
 

@@ -86,7 +86,7 @@ public class Player : MonoBehaviour
             rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
         }
 
-        if (rb.velocity.x != 0 && animations.GetBool("isFalling") != true)
+        if (rb.velocity.x != 0 && animations.GetBool("isFalling") != true && animations.GetBool("IsJumping") != true)
         {
             animations.SetBool("IsWalking", true);
         }
@@ -97,11 +97,20 @@ public class Player : MonoBehaviour
 
         if (rb.velocity.y > 0)
         {
-            animations.SetInteger("Jump", 1);
+            animations.SetBool("IsJumping", true);
         }
         else
         {
-            animations.SetInteger("Jump", 0);
+            animations.SetBool("IsJumping", false);
+        }
+
+        if (rb.velocity.y < 0)
+        {
+            animations.SetBool("isFalling", true);
+        }
+        else
+        {
+            animations.SetBool("isFalling", false);
         }
 
     }
