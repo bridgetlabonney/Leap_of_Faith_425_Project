@@ -34,14 +34,14 @@ public class DialogueBox : MonoBehaviour
     {
         if (Tutorial)
         {
-            if (txtcnt == d.words.Length && Input.GetMouseButtonDown(0))
+            if (txtcnt == d.words.Length && (Input.GetMouseButtonDown(0) || Input.GetButtonDown("Jump")))
             {
                 box.SetActive(false);
             }
         }
         else
         {
-            if (txtcnt == d.words.Length && Input.GetMouseButtonDown(0))
+            if (txtcnt == d.words.Length && (Input.GetMouseButtonDown(0) || Input.GetButtonDown("Jump")))
             {
                 if (SceneChange)
                 {
@@ -85,11 +85,11 @@ public class DialogueBox : MonoBehaviour
             StartCoroutine(typewriter(t));
             if (!Tutorial)
             {
-                yield return new WaitUntil(() => Input.GetMouseButtonDown(0));
+                yield return new WaitUntil(() => (Input.GetMouseButtonDown(0) || Input.GetButtonDown("Jump")));
             }
             else
             {
-                yield return new WaitUntil(() => Input.GetMouseButtonDown(0) == true);
+                yield return new WaitUntil(() => (Input.GetMouseButtonDown(0) == true || Input.GetButtonDown("Jump") == true));
             }
             yield return new WaitForSeconds(3/4); //prevents ignoring next input, for some reason
         }

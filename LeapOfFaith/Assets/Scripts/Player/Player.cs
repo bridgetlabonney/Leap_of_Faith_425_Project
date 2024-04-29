@@ -26,6 +26,8 @@ public class Player : MonoBehaviour
     private Vector2 wallJumpingPower = new Vector2(2f, 16f);
     public ScoreManager sm;
 
+
+
     private Animator animations;
     
 
