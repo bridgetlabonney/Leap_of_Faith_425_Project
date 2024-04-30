@@ -346,6 +346,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -0.0236
       objectReference: {fileID: 0}
+    - target: {fileID: 3116310375587127623, guid: 7b97c56d748bff34e9239e778240aa36, type: 3}
+      propertyPath: m_Size.x
+      value: 9.3
+      objectReference: {fileID: 0}
     - target: {fileID: 6517377509483428857, guid: 7b97c56d748bff34e9239e778240aa36, type: 3}
       propertyPath: m_Name
       value: Spikes (27)
@@ -1328,6 +1332,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -0.0236
       objectReference: {fileID: 0}
+    - target: {fileID: 3116310375587127623, guid: 7b97c56d748bff34e9239e778240aa36, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6517377509483428857, guid: 7b97c56d748bff34e9239e778240aa36, type: 3}
       propertyPath: m_Name
       value: Spikes (33)
@@ -1388,7 +1396,8 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1496654777}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8687076886692147319, guid: 7b97c56d748bff34e9239e778240aa36, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7b97c56d748bff34e9239e778240aa36, type: 3}
 --- !u!1001 &93409570
 PrefabInstance:
@@ -3475,6 +3484,10 @@ PrefabInstance:
     - target: {fileID: 2795094288999843715, guid: 7b97c56d748bff34e9239e778240aa36, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.0236
+      objectReference: {fileID: 0}
+    - target: {fileID: 3116310375587127623, guid: 7b97c56d748bff34e9239e778240aa36, type: 3}
+      propertyPath: m_Size.x
+      value: 10.9
       objectReference: {fileID: 0}
     - target: {fileID: 6517377509483428857, guid: 7b97c56d748bff34e9239e778240aa36, type: 3}
       propertyPath: m_Name
@@ -8870,6 +8883,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -0.0236
       objectReference: {fileID: 0}
+    - target: {fileID: 3116310375587127623, guid: 7b97c56d748bff34e9239e778240aa36, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6517377509483428857, guid: 7b97c56d748bff34e9239e778240aa36, type: 3}
       propertyPath: m_Name
       value: Spikes (26)
@@ -8930,7 +8947,8 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1496654777}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8687076886692147319, guid: 7b97c56d748bff34e9239e778240aa36, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7b97c56d748bff34e9239e778240aa36, type: 3}
 --- !u!1001 &671559530
 PrefabInstance:
@@ -12503,6 +12521,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -0.0236
       objectReference: {fileID: 0}
+    - target: {fileID: 3116310375587127623, guid: 7b97c56d748bff34e9239e778240aa36, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6517377509483428857, guid: 7b97c56d748bff34e9239e778240aa36, type: 3}
       propertyPath: m_Name
       value: Spikes (25)
@@ -12563,7 +12585,8 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1496654777}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8687076886692147319, guid: 7b97c56d748bff34e9239e778240aa36, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7b97c56d748bff34e9239e778240aa36, type: 3}
 --- !u!1001 &1152427684
 PrefabInstance:
@@ -13864,6 +13887,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -0.0236
       objectReference: {fileID: 0}
+    - target: {fileID: 3116310375587127623, guid: 7b97c56d748bff34e9239e778240aa36, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6517377509483428857, guid: 7b97c56d748bff34e9239e778240aa36, type: 3}
       propertyPath: m_Name
       value: Spikes (28)
@@ -13924,7 +13951,8 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1496654777}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8687076886692147319, guid: 7b97c56d748bff34e9239e778240aa36, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7b97c56d748bff34e9239e778240aa36, type: 3}
 --- !u!1 &1237842178
 GameObject:
@@ -16577,6 +16605,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -0.0236
       objectReference: {fileID: 0}
+    - target: {fileID: 3116310375587127623, guid: 7b97c56d748bff34e9239e778240aa36, type: 3}
+      propertyPath: m_Size.x
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 3116310375587127623, guid: 7b97c56d748bff34e9239e778240aa36, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 6517377509483428857, guid: 7b97c56d748bff34e9239e778240aa36, type: 3}
       propertyPath: m_Name
       value: Spikes (30)
@@ -16714,6 +16750,10 @@ PrefabInstance:
       propertyPath: sm
       value: 
       objectReference: {fileID: 1275905231}
+    - target: {fileID: 1884897218025947666, guid: a60c511172b0f194db1313a037a29b96, type: 3}
+      propertyPath: health
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1884897218025947666, guid: a60c511172b0f194db1313a037a29b96, type: 3}
       propertyPath: wallLayer.m_Bits
       value: 8
@@ -20680,6 +20720,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -0.0236
       objectReference: {fileID: 0}
+    - target: {fileID: 3116310375587127623, guid: 7b97c56d748bff34e9239e778240aa36, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6517377509483428857, guid: 7b97c56d748bff34e9239e778240aa36, type: 3}
       propertyPath: m_Name
       value: Spikes (32)
@@ -20740,7 +20784,8 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1496654777}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8687076886692147319, guid: 7b97c56d748bff34e9239e778240aa36, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7b97c56d748bff34e9239e778240aa36, type: 3}
 --- !u!1001 &1862057287
 PrefabInstance:
@@ -21819,6 +21864,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -0.0236
       objectReference: {fileID: 0}
+    - target: {fileID: 3116310375587127623, guid: 7b97c56d748bff34e9239e778240aa36, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6517377509483428857, guid: 7b97c56d748bff34e9239e778240aa36, type: 3}
       propertyPath: m_Name
       value: Spikes (29)
@@ -21879,7 +21928,8 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1496654777}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8687076886692147319, guid: 7b97c56d748bff34e9239e778240aa36, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7b97c56d748bff34e9239e778240aa36, type: 3}
 --- !u!1 &1934910015
 GameObject:
@@ -23241,6 +23291,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -0.0236
       objectReference: {fileID: 0}
+    - target: {fileID: 3116310375587127623, guid: 7b97c56d748bff34e9239e778240aa36, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6517377509483428857, guid: 7b97c56d748bff34e9239e778240aa36, type: 3}
       propertyPath: m_Name
       value: Spikes (31)
@@ -23301,7 +23355,8 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1496654777}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8687076886692147319, guid: 7b97c56d748bff34e9239e778240aa36, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7b97c56d748bff34e9239e778240aa36, type: 3}
 --- !u!1 &2087898042
 GameObject:

@@ -1371,7 +1371,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 13
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1395,7 +1395,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 160379497}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 133.52, y: -10.55, z: -80.2081}
+  m_LocalPosition: {x: 4.27, y: 2, z: -80.2081}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4368,6 +4368,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3116310375587127623, guid: 7b97c56d748bff34e9239e778240aa36, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6517377509483428857, guid: 7b97c56d748bff34e9239e778240aa36, type: 3}
       propertyPath: m_Name
       value: Spikes (1)
@@ -8272,7 +8276,7 @@ MonoBehaviour:
   m_Follow: {fileID: 0}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 10
+    OrthographicSize: 13
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -8296,7 +8300,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1169776825}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.27, y: 2, z: -80.2081}
+  m_LocalPosition: {x: 133.52, y: -10.7, z: -80.2081}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8354,7 +8358,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.044382095, y: 0.0063648224}
+  m_Offset: {x: -0.018432, y: -0.035508}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -8365,7 +8369,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 41.897625, y: 20.073711}
+  m_Size: {x: 30.34767, y: 54.04405}
   m_EdgeRadius: 0
 --- !u!114 &1169776830
 MonoBehaviour:
@@ -10570,6 +10574,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3116310375587127623, guid: 7b97c56d748bff34e9239e778240aa36, type: 3}
+      propertyPath: m_Size.x
+      value: 8.2
+      objectReference: {fileID: 0}
     - target: {fileID: 6517377509483428857, guid: 7b97c56d748bff34e9239e778240aa36, type: 3}
       propertyPath: m_Name
       value: Spikes
@@ -11230,7 +11238,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.018432617, y: -0.035508156}
+  m_Offset: {x: 0.0443821, y: 0.0063648}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -11241,7 +11249,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 30.34767, y: 54.04405}
+  m_Size: {x: 41.89762, y: 20.07371}
   m_EdgeRadius: 0
 --- !u!114 &1846514601
 MonoBehaviour:
@@ -11302,7 +11310,7 @@ MonoBehaviour:
   m_Follow: {fileID: 0}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 13
+    OrthographicSize: 10
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -11326,7 +11334,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1846514599}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 133.52, y: -10.55, z: -80.2081}
+  m_LocalPosition: {x: 4.27, y: 2, z: -80.2081}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
