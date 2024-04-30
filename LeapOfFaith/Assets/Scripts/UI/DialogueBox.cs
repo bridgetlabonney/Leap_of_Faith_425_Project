@@ -13,7 +13,7 @@ using UnityEngine.SceneManagement;
 public class DialogueBox : MonoBehaviour
 {
     public Dialogue d;
-    
+    public dialougeprompt pmt;
     public Text dialogue;
     private int txtcnt = 0;
     public bool SceneChange;
@@ -57,23 +57,25 @@ public class DialogueBox : MonoBehaviour
 
     void changeDialogue(Dialogue newWords)
     {
+
         d = newWords;
     }
     IEnumerator typewriter(string t)
     {
 
-            
-              string holder = null;
-              foreach(char c in t)
-              {
-                  holder += c;
-                yield return new WaitForSeconds(3 / 4);
-                dialogue.text = holder;
-                yield return new WaitForSeconds(3 / 4);
 
-              }
+        string holder = null;
+        foreach (char c in t)
+        {
+            holder += c;
+            yield return new WaitForSeconds(3 / 4);
+            dialogue.text = holder;
+            yield return new WaitForSeconds(3 / 4);
 
         }
+        pmt.waiting = false;
+
+    }
 
     //displays each dialogue box
     IEnumerator displaywords(string[] words)
@@ -82,17 +84,21 @@ public class DialogueBox : MonoBehaviour
         foreach (string t in words)
         {
             txtcnt++;
+            pmt.waiting = true;
             StartCoroutine(typewriter(t));
             if (!Tutorial)
             {
+
                 yield return new WaitUntil(() => (Input.GetMouseButtonDown(0) || Input.GetButtonDown("Jump")));
+
             }
             else
             {
                 yield return new WaitUntil(() => (Input.GetMouseButtonDown(0) == true || Input.GetButtonDown("Jump") == true));
             }
-            yield return new WaitForSeconds(3/4); //prevents ignoring next input, for some reason
+            yield return new WaitForSeconds(3 / 4); //prevents ignoring next input, for some reason
         }
-        
+
     }
 }
+
