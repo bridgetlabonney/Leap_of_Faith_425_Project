@@ -9165,6 +9165,14 @@ PrefabInstance:
       propertyPath: hud
       value: 
       objectReference: {fileID: 14955239}
+    - target: {fileID: 9105079224176062663, guid: 19e17f4a26e17a047a2f5fb093439d08, type: 3}
+      propertyPath: respawnpos.x
+      value: -50.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9105079224176062663, guid: 19e17f4a26e17a047a2f5fb093439d08, type: 3}
+      propertyPath: respawnpos.y
+      value: -0.05
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 19e17f4a26e17a047a2f5fb093439d08, type: 3}
 --- !u!114 &2116618994 stripped
@@ -9516,6 +9524,14 @@ PrefabInstance:
       propertyPath: sm
       value: 
       objectReference: {fileID: 1987639807}
+    - target: {fileID: 1884897218025947666, guid: a60c511172b0f194db1313a037a29b96, type: 3}
+      propertyPath: checkpointpos.x
+      value: -50.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1884897218025947666, guid: a60c511172b0f194db1313a037a29b96, type: 3}
+      propertyPath: checkpointpos.y
+      value: -0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 1884897218025947666, guid: a60c511172b0f194db1313a037a29b96, type: 3}
       propertyPath: wallLayer.m_Bits
       value: 8

@@ -35,7 +35,7 @@ public class checkpointManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        respawnpos = new Vector3(0, 0, 0);
+        //respawnpos = new Vector3(0, 0, 0); //was causing player to teleport here if no checkpoint had been touched, which isnt the starting location for some levels.
     }
 
     // Update is called once per frame

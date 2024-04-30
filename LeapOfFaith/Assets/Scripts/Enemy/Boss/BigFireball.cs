@@ -56,7 +56,7 @@ public class BigFireball : MonoBehaviour
         {
             other.gameObject.GetComponent<Player>().health -= 3; //Kills player instantly
         }
-        else if (other.gameObject.CompareTag("Ground") || other.gameObject.CompareTag("WallLayer"))
+        else if (other.gameObject.CompareTag("Ground"))
         {
             Destroy(gameObject);
         }

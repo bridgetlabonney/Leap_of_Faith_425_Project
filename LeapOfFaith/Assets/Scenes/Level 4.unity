@@ -14491,6 +14491,14 @@ PrefabInstance:
       propertyPath: pl
       value: 
       objectReference: {fileID: 1496654777}
+    - target: {fileID: 9105079224176062663, guid: 19e17f4a26e17a047a2f5fb093439d08, type: 3}
+      propertyPath: respawnpos.x
+      value: -54.88
+      objectReference: {fileID: 0}
+    - target: {fileID: 9105079224176062663, guid: 19e17f4a26e17a047a2f5fb093439d08, type: 3}
+      propertyPath: respawnpos.y
+      value: 31.24
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 19e17f4a26e17a047a2f5fb093439d08, type: 3}
 --- !u!114 &1275905231 stripped
