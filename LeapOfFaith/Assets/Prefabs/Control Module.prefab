@@ -55,7 +55,6 @@ MonoBehaviour:
   menu: {fileID: 6650220663127185366}
   menuEnabled: 0
   HUD: {fileID: 8112402802417734808}
-  escFirstButton: {fileID: 0}
 --- !u!114 &8795524455241143884
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70,7 +69,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menu: {fileID: 8902245504773282250}
   HUD: {fileID: 8112402802417734808}
-  gameoverFirstButton: {fileID: 0}
 --- !u!114 &9105079224176062663
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,10 +134,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5524601319834735529}
     m_Modifications:
-    - target: {fileID: 8939575947183698178, guid: f072cea2c92ce904fab33671898d0b3a, type: 3}
-      propertyPath: m_SortingOrder
-      value: 998
-      objectReference: {fileID: 0}
     - target: {fileID: 8939575947183698179, guid: f072cea2c92ce904fab33671898d0b3a, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -452,7 +446,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4738104348141273431, guid: 9364aa61eadbf27409067fe8361bba87, type: 3}
       propertyPath: m_SortingOrder
-      value: 997
+      value: 998
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9364aa61eadbf27409067fe8361bba87, type: 3}
