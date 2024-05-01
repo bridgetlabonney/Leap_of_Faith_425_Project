@@ -17,7 +17,7 @@ public class Boss : MonoBehaviour
     public float health = 3f;
     private Animator animations;
     private bool canFireball = true;
-    private bool isInvuln = false;
+    private bool isInvuln = true;
     public int timesShot = 0;
     public int timesShotBig = 0;
     private Rigidbody2D rb;
@@ -41,6 +41,7 @@ public class Boss : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animations = GetComponent<Animator>();
         boxCollider = GetComponent<BoxCollider2D>();
+        boxCollider.size = new Vector2(0.0f, 0.0f);
     }
 
     // Update is called once per frame
@@ -157,8 +158,8 @@ public class Boss : MonoBehaviour
     {
         canFireball = false;
         isInvuln = true;
-        boxCollider.size = new Vector2(0.24f, 0.9f);
         this.transform.position = new Vector3(slamStart.transform.position.x, slamStart.transform.position.y, slamStart.transform.position.z);
+        boxCollider.size = new Vector2(0.24f, 0.9f);
         yield return new WaitForSeconds(1);
         rb.velocity = new Vector2(55, 0);
         yield return new WaitForSeconds(1);
@@ -177,8 +178,8 @@ public class Boss : MonoBehaviour
     {
         canFireball = false;
         isInvuln = true;
-        boxCollider.size = new Vector2(0.24f, 0.9f);
         this.transform.position = new Vector3(slamStart.transform.position.x, slamStart.transform.position.y, slamStart.transform.position.z);
+        boxCollider.size = new Vector2(0.24f, 0.9f);
         yield return new WaitForSeconds(1);
         rb.velocity = new Vector2(55, 0);
         yield return new WaitForSeconds(1);
@@ -197,8 +198,8 @@ public class Boss : MonoBehaviour
     {
         canFireball = false;
         isInvuln = true;
-        boxCollider.size = new Vector2(0.24f, 0.9f);
         this.transform.position = new Vector3(slamStart.transform.position.x, slamStart.transform.position.y, slamStart.transform.position.z);
+        boxCollider.size = new Vector2(0.24f, 0.9f);
         yield return new WaitForSeconds(1);
         rb.velocity = new Vector2(55, 0);
         yield return new WaitForSeconds(1);
@@ -229,7 +230,6 @@ public class Boss : MonoBehaviour
         rb.velocity = new Vector3(0, 0, 0);
         this.transform.position = new Vector3(slamStart.transform.position.x, slamStart.transform.position.y, slamStart.transform.position.z);
         yield return new WaitForSeconds(1.5f);
-        boxCollider.size = new Vector2(0.83f, 0.9f);
         animations.SetTrigger("IdleNoAttackTimeUp");
         canFireball = true;
         isInvuln = false;
@@ -276,6 +276,7 @@ public class Boss : MonoBehaviour
         }
         yield return new WaitForSeconds(5);
         animations.SetTrigger("IdleNoAttackTimeUp");
+        boxCollider.size = new Vector2(0.0f, 0.0f);
         canFireball = true;
 
     }
@@ -301,6 +302,7 @@ public class Boss : MonoBehaviour
         }
         yield return new WaitForSeconds(5);
         animations.SetTrigger("IdleNoAttackTimeUp");
+        boxCollider.size = new Vector2(0.0f, 0.0f);
         canFireball = true;
 
     }
@@ -326,6 +328,7 @@ public class Boss : MonoBehaviour
         }
         yield return new WaitForSeconds(5);
         animations.SetTrigger("IdleNoAttackTimeUp");
+        boxCollider.size = new Vector2(0.0f, 0.0f);
         canFireball = true;
 
     }

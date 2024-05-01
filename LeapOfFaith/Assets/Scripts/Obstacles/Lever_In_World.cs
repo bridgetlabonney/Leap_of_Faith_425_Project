@@ -24,7 +24,7 @@ public class Lever_In_World : MonoBehaviour
     {
         if (col.CompareTag("Player") && switched == false)
         {
-            if (Input.GetKeyDown(KeyCode.F) || Input.GetKeyDown(KeyCode.JoystickButton2))
+            if (Input.GetKeyDown(KeyCode.F) || Input.GetButtonDown("Fire3"))
             {
                 switched = true;
                 door.SetActive(false);
@@ -35,7 +35,7 @@ public class Lever_In_World : MonoBehaviour
             }
             if (col.CompareTag("Player") && switched == true)
             {
-                if (Input.GetKeyDown(KeyCode.F) || Input.GetKeyDown(KeyCode.JoystickButton2))
+                if (Input.GetKeyDown(KeyCode.F) || Input.GetButtonDown("Fire3"))
                 {
                     switched = true;
                     door.SetActive(false);

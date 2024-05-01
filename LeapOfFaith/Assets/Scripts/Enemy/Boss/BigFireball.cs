@@ -43,9 +43,9 @@ public class BigFireball : MonoBehaviour
             canGrow = false;
 
             Vector3 direction = player.transform.position - transform.position;
-            rb.velocity = new Vector2(direction.x * 1.0f, direction.y * 1.0f).normalized * force;
+            rb.velocity = new Vector2(direction.x, direction.y).normalized * force;
 
-            float rot = Mathf.Atan2(-direction.y * 1.0f, -direction.x * 1.0f) * Mathf.Rad2Deg;
+            float rot = Mathf.Atan2(-direction.y, -direction.x) * Mathf.Rad2Deg;
             transform.rotation = Quaternion.Euler(0, 0, rot);
         }
     }
@@ -56,7 +56,8 @@ public class BigFireball : MonoBehaviour
         {
             other.gameObject.GetComponent<Player>().health -= 3; //Kills player instantly
         }
-        else if (other.gameObject.CompareTag("Ground"))
+
+        if (other.gameObject.CompareTag("Ground"))
         {
             Destroy(gameObject);
         }

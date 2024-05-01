@@ -48,7 +48,7 @@ public class candleCheckpoint : MonoBehaviour
 
     public void OnTriggerStay2D(Collider2D collision)
     {
-        if ((Input.GetKeyDown(KeyCode.F) || Input.GetKeyDown(KeyCode.JoystickButton2)) && lighton == false)
+        if ((Input.GetKeyDown(KeyCode.F) || Input.GetButtonDown("Fire3")) && lighton == false)
         {
             lighton = true;
             StartCoroutine(turnLight());
